@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ember-concurrency</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+<meta name="dummy/config/environment" content="%7B%22modulePrefix%22%3A%22dummy%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22/ember-concurrency/%22%2C%22locationType%22%3A%22auto%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%7D%7D%2C%22APP%22%3A%7B%22name%22%3A%22ember-concurrency%22%2C%22version%22%3A%220.8.14+50bc550a%22%7D%2C%22fastboot%22%3A%7B%22hostWhitelist%22%3A%5B%7B%7D%2C%22ember-concurrency.com%22%2C%22ef4.github.com%22%5D%7D%2C%22exportApplicationGlobal%22%3Afalse%7D" />
+<!-- EMBER_CLI_FASTBOOT_TITLE -->
+
+    <link integrity="" rel="stylesheet" href="/ember-concurrency/assets/vendor-e754b247f0b14ad5fde0f302404dd7cb.css">
+    <link integrity="" rel="stylesheet" href="/ember-concurrency/assets/dummy-7f48877695f90667ea4c9e336bd96024.css">
+    <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+    
+  </head>
+  <body>
+    <div id="ember2166" class="ember-view"><div class="container navbar">
+  <div class="row">
+    <div class="ten columns">
+      <h3 style="float:left;">
+        ember-concurrency
+
+        <span style="font-size: 0.5em;">
+          (v 0.8.14)
+        </span>
+      </h3>
+    </div>
+    <div class="one columns">
+      <div class="nav-bar-link-outer">
+        <a href="/api">API</a>
+      </div>
+    </div>
+    <div class="one columns">
+      <div class="nav-bar-link-outer">
+        <a href="https://github.com/machty/ember-concurrency" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="docs row">
+    <div class="three columns">
+      <div class="side-menu">
+            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/introduction" id="ember2169" class="ember-view">Home</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/installation" id="ember2173" class="ember-view">Installation</a>
+            </div>
+
+
+<!---->            <div class="toc-section-title">
+              Introduction
+            </div>
+            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/tutorial" id="ember2177" class="ember-view">Writing Code Without Tasks</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/tutorial/discussion" id="ember2184" class="ember-view">Post-Mortem</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/tutorial/refactor" id="ember2188" class="ember-view">Refactoring With Tasks</a>
+            </div>
+
+
+<!---->            <div class="toc-section-title">
+              Reference
+            </div>
+            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/task-function-syntax" id="ember2192" class="ember-view">Task Function Syntax</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/task-concurrency" id="ember2196" class="ember-view">Managing Task Concurrency</a>
+            </div>
+
+
+                <div class="toc-entry toc-subentry">
+                  <a href="/ember-concurrency/docs/task-concurrency-advanced" id="ember2200" class="ember-view">Advanced</a>
+                  </div>
+            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/cancelation" id="ember2204" class="ember-view">Cancelation</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/error-vs-cancelation" id="ember2208" class="ember-view">Handling Errors</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/child-tasks" id="ember2212" class="ember-view">Child Tasks</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/task-groups" id="ember2216" class="ember-view">Task Groups</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/derived-state" id="ember2220" class="ember-view">Derived State</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/encapsulated-task" id="ember2224" class="active ember-view">Encapsulated Tasks</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/events" id="ember2225" class="ember-view">Ember &amp; DOM / jQuery Events</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/testing-debugging" id="ember2229" class="ember-view">Testing &amp; Debugging</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/faq" id="ember2233" class="ember-view">FAQ &amp; Fact Sheet</a>
+            </div>
+
+
+<!---->            <div class="toc-section-title">
+              Examples
+            </div>
+            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/examples/loading-ui" id="ember2237" class="ember-view">Loading UI</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/examples/autocomplete" id="ember2244" class="ember-view">Type-Ahead Search</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/examples/increment-buttons" id="ember2248" class="ember-view">Accelerating Increment Buttons</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/examples/ajax-throttling" id="ember2252" class="ember-view">AJAX Throttling</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/examples/route-tasks" id="ember2256" class="ember-view">Route Tasks</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/examples/joining-tasks" id="ember2260" class="ember-view">Awaiting Multiple Child Tasks</a>
+            </div>
+
+
+<!---->      </div>
+    </div>
+    <div class="nine columns">
+      <div class="row">
+    <p class="u-pull-left">
+      Previous: <a href="/ember-concurrency/docs/derived-state" id="ember2264" class="ember-view">Derived State</a>
+    </p>
+
+    <p class="u-pull-right">
+      Next: <a href="/ember-concurrency/docs/events" id="ember2265" class="ember-view">Ember &amp; DOM / jQuery Events</a>
+    </p>
+</div>
+
+
+      <a title="Edit on Github" href="https://github.com/machty/ember-concurrency/edit/master/tests/dummy/app/docs/encapsulated-task/template.hbs" id="ember2266" class="github-edit ember-view"><i class="icon-pencil"></i>
+</a>
+
+      <h3>Encapsulated Tasks</h3>
+
+<p>
+  Normally, you define tasks by passing a generator function to <code>task(...)</code>.
+  Often though, you want to be able to expose additional state of the task,
+  e.g. you might want to show the percentage progress of an <code>uploadFile</code> task,
+  but unless you're using the techniques describes below there's no good
+  place to expose that data to the template other than to set some properties
+  on the host object, but then you lose a lot of the benefits of encapsulation
+  in the process.
+</p>
+
+<p>
+  In cases like these, you can use Encapsulated Tasks, which behave just
+  like regular tasks, but with one crucial difference: the value
+  of <code>this</code> within the task function points to the currently
+  running TaskInstance, rather than the host object that the task lives on
+  (e.g. a Component, Controller, etc). This allows for some nice patterns
+  where all of the state produced/mutated by a task can be contained (encapsulated)
+  <em>within</em> the Task itself, rather than having to live on the host
+  object.
+</p>
+
+<p>
+  To create an encapsulated task, pass an object (instead of a generator function)
+  to the <code>task()</code>
+  constructor that defines a <code>perform</code> generator function. The
+  object can also contain initial values for task state, as well as computed
+  properties and anything else supported by classic Ember objects.
+</p>
+
+<pre id="ember2268" class="javascript ember-view">import { task } from 'ember-concurrency';
+
+export default Component.extend({
+  outerFoo: 123,
+  regularTask: task(function * (value) {
+    // this is a classic/regular ember-concurrency task,
+    // which has direct access to the host object that it
+    // lives on via `this`
+    console.log(this.outerFoo); // =&gt; 123
+    yield doSomeAsync();
+    this.set('outerFoo', value);
+  }),
+
+  encapsulatedTask: task({
+    innerFoo: 456,
+
+    // this `*perform() {}` syntax is valid JavaScript shorthand
+    // syntax for `perform: function * () {}`
+
+    *perform(value) {
+      // this is an encapulated task. It does NOT have
+      // direct access to the host object it lives on, but rather
+      // only the properties defined within the POJO passed
+      // to the `task()` constructor.
+      console.log(this.innerFoo); // =&gt; 456
+
+      // `this` is the currently executing TaskInstance, so
+      // you can also get classic TaskInstance properties
+      // provided by ember-concurrency.
+      console.log(this.get('isRunning')); // =&gt; true
+
+      yield doSomeAsync();
+      this.set('innerFoo', value);
+    },
+  })
+});
+</pre>
+
+<h3>Live Example</h3>
+
+<p>
+  This example demonstrates how to use encapsulated tasks to
+  model file uploads. It keeps all of the upload state <em>within</em>
+  each TaskInstance, and uses <a href="/ember-concurrency/docs/derived-state" id="ember2269" class="ember-view">Derived State</a>
+  to expose the values set within the encapsulated tasks.
+</p>
+
+<p>
+  <button>
+    Start Upload
+  </button>
+</p>
+
+<h5>Queued Uploads: 0</h5>
+
+<!---->
+<!---->
+
+<pre id="ember2272" class="javascript ember-view">import { task, timeout } from 'ember-concurrency';
+
+export default Controller.extend({
+  uploadFile: task({
+    progress: 0,
+    url: null,
+
+    stateText: computed('progress', function() {
+      let progress = this.get('progress');
+      if (progress &lt; 49) {
+        return "Just started..."
+      } else if (progress &lt; 100) {
+        return "Halfway there..."
+      } else {
+        return "Done!"
+      }
+    }),
+
+    *perform(makeUrl) {
+      this.set('url', makeUrl());
+
+      while (this.progress &lt; 100) {
+        yield timeout(200);
+        let newProgress = this.progress + Math.floor(Math.random() * 6) + 5;
+        this.set('progress', Math.min(100, newProgress));
+      }
+
+      return "(upload result data)";
+    },
+  }).enqueue(),
+
+  makeRandomUrl() {
+    return `https://www.${randomWord()}.edu`;
+  }
+});
+</pre>
+<pre id="ember2273" class="htmlbars ember-view">&lt;p&gt;
+  &lt;button onclick={{perform uploadFile makeRandomUrl}}&gt;
+    Start Upload
+  &lt;/button&gt;
+&lt;/p&gt;
+
+&lt;h5&gt;Queued Uploads: {{uploadFile.numQueued}}&lt;/h5&gt;
+
+{{#with uploadFile.last as |encapsTask|}}
+  &lt;h5&gt;
+    Uploading to {{encapsTask.url}} ({{encapsTask.stateText}}):
+    {{encapsTask.progress}}%
+  &lt;/h5&gt;
+{{/with}}
+
+{{#if uploadFile.lastSuccessful}}
+  &lt;h5 style="color: green;"&gt;
+    &lt;strong&gt;
+    Upload to {{uploadFile.lastSuccessful.url}}:
+    {{uploadFile.lastSuccessful.value}}
+    &lt;/strong&gt;
+  &lt;/h5&gt;
+{{/if}}
+</pre>
+
+
+      <br> <br> <br> <br> 
+
+      <div class="row">
+    <p class="u-pull-left">
+      Previous: <a href="/ember-concurrency/docs/derived-state" id="ember2274" class="ember-view">Derived State</a>
+    </p>
+
+    <p class="u-pull-right">
+      Next: <a href="/ember-concurrency/docs/events" id="ember2275" class="ember-view">Ember &amp; DOM / jQuery Events</a>
+    </p>
+</div>
+
+
+    </div>
+  </div>
+</div>
+
+
+<div id="ember2276" class="ember-notify-cn ember-notify-default ember-view"><!----></div>
+</div>
+
+    <script src="/ember-concurrency/assets/vendor-5f94e20cd7ff4ec97d6a6a3b5639223f.js"></script>
+    <script src="/ember-concurrency/assets/dummy-72adf74a268ccaf64e1eadff9fee5dbf.js"></script>
+
+    
+  </body>
+</html>

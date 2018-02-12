@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ember-concurrency</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+<meta name="dummy/config/environment" content="%7B%22modulePrefix%22%3A%22dummy%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22/ember-concurrency/%22%2C%22locationType%22%3A%22auto%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%7D%7D%2C%22APP%22%3A%7B%22name%22%3A%22ember-concurrency%22%2C%22version%22%3A%220.8.14+50bc550a%22%7D%2C%22fastboot%22%3A%7B%22hostWhitelist%22%3A%5B%7B%7D%2C%22ember-concurrency.com%22%2C%22ef4.github.com%22%5D%7D%2C%22exportApplicationGlobal%22%3Afalse%7D" />
+<!-- EMBER_CLI_FASTBOOT_TITLE -->
+
+    <link integrity="" rel="stylesheet" href="/ember-concurrency/assets/vendor-e754b247f0b14ad5fde0f302404dd7cb.css">
+    <link integrity="" rel="stylesheet" href="/ember-concurrency/assets/dummy-7f48877695f90667ea4c9e336bd96024.css">
+    <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+    
+  </head>
+  <body>
+    <div id="ember2538" class="ember-view"><div class="container navbar">
+  <div class="row">
+    <div class="ten columns">
+      <h3 style="float:left;">
+        ember-concurrency
+
+        <span style="font-size: 0.5em;">
+          (v 0.8.14)
+        </span>
+      </h3>
+    </div>
+    <div class="one columns">
+      <div class="nav-bar-link-outer">
+        <a href="/api">API</a>
+      </div>
+    </div>
+    <div class="one columns">
+      <div class="nav-bar-link-outer">
+        <a href="https://github.com/machty/ember-concurrency" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="docs row">
+    <div class="three columns">
+      <div class="side-menu">
+            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/introduction" id="ember2541" class="ember-view">Home</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/installation" id="ember2545" class="ember-view">Installation</a>
+            </div>
+
+
+<!---->            <div class="toc-section-title">
+              Introduction
+            </div>
+            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/tutorial" id="ember2549" class="ember-view">Writing Code Without Tasks</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/tutorial/discussion" id="ember2556" class="ember-view">Post-Mortem</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/tutorial/refactor" id="ember2560" class="ember-view">Refactoring With Tasks</a>
+            </div>
+
+
+<!---->            <div class="toc-section-title">
+              Reference
+            </div>
+            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/task-function-syntax" id="ember2564" class="ember-view">Task Function Syntax</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/task-concurrency" id="ember2568" class="ember-view">Managing Task Concurrency</a>
+            </div>
+
+
+                <div class="toc-entry toc-subentry">
+                  <a href="/ember-concurrency/docs/task-concurrency-advanced" id="ember2572" class="ember-view">Advanced</a>
+                  </div>
+            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/cancelation" id="ember2576" class="ember-view">Cancelation</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/error-vs-cancelation" id="ember2580" class="ember-view">Handling Errors</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/child-tasks" id="ember2584" class="ember-view">Child Tasks</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/task-groups" id="ember2588" class="ember-view">Task Groups</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/derived-state" id="ember2592" class="ember-view">Derived State</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/encapsulated-task" id="ember2596" class="ember-view">Encapsulated Tasks</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/events" id="ember2600" class="ember-view">Ember &amp; DOM / jQuery Events</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/testing-debugging" id="ember2604" class="ember-view">Testing &amp; Debugging</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/faq" id="ember2608" class="active ember-view">FAQ &amp; Fact Sheet</a>
+            </div>
+
+
+<!---->            <div class="toc-section-title">
+              Examples
+            </div>
+            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/examples/loading-ui" id="ember2609" class="ember-view">Loading UI</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/examples/autocomplete" id="ember2616" class="ember-view">Type-Ahead Search</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/examples/increment-buttons" id="ember2620" class="ember-view">Accelerating Increment Buttons</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/examples/ajax-throttling" id="ember2624" class="ember-view">AJAX Throttling</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/examples/route-tasks" id="ember2628" class="ember-view">Route Tasks</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a href="/ember-concurrency/docs/examples/joining-tasks" id="ember2632" class="ember-view">Awaiting Multiple Child Tasks</a>
+            </div>
+
+
+<!---->      </div>
+    </div>
+    <div class="nine columns">
+      <div class="row">
+    <p class="u-pull-left">
+      Previous: <a href="/ember-concurrency/docs/testing-debugging" id="ember2636" class="ember-view">Testing &amp; Debugging</a>
+    </p>
+
+    <p class="u-pull-right">
+      Next: <a href="/ember-concurrency/docs/examples/loading-ui" id="ember2637" class="ember-view">Loading UI</a>
+    </p>
+</div>
+
+
+      <a title="Edit on Github" href="https://github.com/machty/ember-concurrency/edit/master/tests/dummy/app/docs/faq/template.hbs" id="ember2638" class="github-edit ember-view"><i class="icon-pencil"></i>
+</a>
+
+      <h2>FAQ &amp; Fact Sheet</h2>
+
+<h4>Why am I seeing TaskCancelation errors in my logs?</h4>
+
+<p>
+See <a href="/ember-concurrency/docs/task-cancelation-help" id="ember2640" class="ember-view">this link</a>.
+</p>
+
+<h4>Does ember-concurrency work with older browsers?</h4>
+
+<p>
+  Yes. The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*">ES6 Generator Function syntax</a>
+  that ember-concurrency relies on is automatically transpiled using Babel
+  and <a href="https://github.com/facebook/regenerator">regenerator</a>, so
+  it'll work on all browsers supported by Ember.
+</p>
+
+<h4>How do ember-concurrency Tasks compare to...</h4>
+
+<h5>Promises?</h5>
+
+<p>
+  Promises aren't cancelable, and as of 12/2016, there is no active TC39 specification
+  under development for adding cancelation to promises.
+  EC Tasks, in contrast, are cancelable.
+</p>
+
+<p>
+  The design of Promises is such that once a Promise has been created, it's not
+  possible to externally reach in and resolve/reject a Promise. This constraint
+  encourages a clear, unidirectional, structured architecture for building
+  asynchronous chains of logic.
+</p>
+
+<p>
+  Like Promises, the return/reject value of an EC Task cannot be externally
+  set / overridden; in other words, once a Task has been performed, there's
+  no way to externally force it to return/reject early, with the exception of
+  cancelation. When you <code>.cancel()</code> a task instance, the task
+  will "return" from wherever it is currently paused (e.g. at a <code>yield</code>).
+  Presently, there is no API to "delay" the cancelation of a Task once a cancel
+  has been requested, but this functionality might be added to future APIs.
+</p>
+
+<ul>
+  <li>
+    <a href="/ember-concurrency/docs/cancelation" id="ember2644" class="ember-view">Docs: implicit vs explicit cancelation</a>
+  </li>
+  <li>
+    <a href="https://github.com/machty/ember-concurrency/issues/98">
+      API discussion: cancel tokens, non-preemptive APIs
+    </a>
+  </li>
+</ul>
+
+<h5>Observables?</h5>
+
+
+<ul>
+  <li><strong>Cancelability</strong>
+    Both Observable subscriptions and Task instances are cancelable. Observables
+    can be canceled implicitly when all subscribers have unsubscribed, or explicitly
+    by calling <code>.dispose()</code> (though this approach is frowned up in favor
+    of explicitly specifying when an observable should terminate -- e.g. via <code>takeUntil()</code>).
+    <a href="/ember-concurrency/docs/cancelation" id="ember2645" class="ember-view">Tasks can be canceled</a> implicitly (via 1. host object destruction, 2. the
+    <code>.restartable()</code> task modifier) or explicitly (via <code>.cancel() / .cancelAll()</code>), though,
+    like Observables, the implicit approach is preferable.
+  </li>
+  <li><strong>Multiple / Single Values</strong>
+    Observables can emit multiple values over time. Tasks don't really "emit" values,
+    but can <code>.set()</code> values on the object the task lives on so that those
+    values can be easily displayed in the template. Tasks also expose the value / error
+    returned from the task function (see <a href="/ember-concurrency/docs/derived-state" id="ember2646" class="ember-view">Derived State</a>),
+    which are preferable to <code>.set()</code>s where possible.
+  </li>
+  <li><strong>Composability</strong>
+    The degree to which an abstraction "composes" depends highly on the problems
+    it is trying to solve and the constraints therein. Observables as a low-level
+    primitive aren't designed to solve specific problems but rather to be as flexible
+    and composable as possible so that developers can build almost anything on top of
+    them to model just about any domain logic under the sun. So, in a sense,
+    Observables can be considered more composable (compositional?) than Tasks,
+    which, by the time they exist, are bound to the lifetime of the Ember Object
+    they live on, which constrains how and where Tasks can be used, but this tradeoff
+    is deliberate and enables some of the patterns described below.
+  </li>
+  <li><strong>Marble Diagrams vs Block Diagrams</strong>
+    The behavior of Observables and their various combinators can be
+    visualized by <a href="http://rxmarbles.com/">Marble Diagrams</a>, where each
+    marble represents a discrete event emitted. Tasks don't emit multiple values,
+    and instead make a greater emphasis on the concept of task/object lifespans, hence
+    are more easily visualized as
+    <a href="/ember-concurrency/docs/task-concurrency" id="ember2647" class="ember-view">possibly overlapping blocks</a> over time.
+  </li>
+  <li><strong>Readability</strong>
+    Warning: highly subjective. ember-concurrency tasks are designed to "feel" like
+    an Ember-y API; among other design goals, it should be relatively easy for a
+    newcomer to the code base come along and understand the flow and various steps
+    taken from the start to the end of the task. It is the contention of @machty,
+    who is biased but also well-versed in both observables and tasks,
+    that understanding the flow of an ember-concurrency
+    task is much "easier" than untangling a mess of Observable combinators for
+    an observable that does the same amount of work and exposes the same amount
+    of derived state as an ember-concurrency task (and @machty has written plenty
+    of apps with Observables). This clarity is due to 1) the pausable/resumable nature
+    of the generator function syntax that ember-concurrency tasks use,
+    2) the fact that tasks expose a lot of commonplace derivable state that you'd
+    otherwise have to split out / filter / merge yourself using observables
+    (e.g. <code>.isIdle / .isRunning / .concurrency</code>) and 3)
+    it's often easier to model domain state as bindable values rather than
+    discrete events.
+  </li>
+</ul>
+
+
+
+      <br> <br> <br> <br> 
+
+      <div class="row">
+    <p class="u-pull-left">
+      Previous: <a href="/ember-concurrency/docs/testing-debugging" id="ember2648" class="ember-view">Testing &amp; Debugging</a>
+    </p>
+
+    <p class="u-pull-right">
+      Next: <a href="/ember-concurrency/docs/examples/loading-ui" id="ember2649" class="ember-view">Loading UI</a>
+    </p>
+</div>
+
+
+    </div>
+  </div>
+</div>
+
+
+<div id="ember2650" class="ember-notify-cn ember-notify-default ember-view"><!----></div>
+</div>
+
+    <script src="/ember-concurrency/assets/vendor-5f94e20cd7ff4ec97d6a6a3b5639223f.js"></script>
+    <script src="/ember-concurrency/assets/dummy-72adf74a268ccaf64e1eadff9fee5dbf.js"></script>
+
+    
+  </body>
+</html>
